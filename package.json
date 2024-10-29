@@ -1,0 +1,15 @@
+{
+    "name": "pulumi-aws-eks-fargate-cmda",
+    "description": "I would like a dedicated node group and a fargate profile, please include the fargate profile creation",
+    "main": "index.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "dependencies": {
+        "@pulumi/pulumi": "*",
+        "@pulumi/awsx": "2.10.0",
+        "@pulumi/eks": "2.8.1",
+        "@pulumi/aws": "6.13.3"
+    }
+}

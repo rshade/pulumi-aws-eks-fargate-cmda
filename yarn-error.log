@@ -1,0 +1,49 @@
+Arguments: 
+  /usr/bin/node /usr/share/yarn/bin/yarn.js install
+
+PATH: 
+  /home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/rshade/.local/bin:/home/rshade/.pyenv/plugins/pyenv-virtualenv/shims:/home/rshade/.pyenv/shims:/home/rshade/.pyenv/bin:/home/rshade/.sdkman/candidates/gradle/current/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/Microsoft SDKs/Azure/CLI2/wbin:/mnt/c/Python310/Scripts/:/mnt/c/Python310/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/ProgramData/chocolatey/lib/pulumi/tools/Pulumi/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Amazon/AWSCLIV2/:/mnt/c/Go/bin:/mnt/c/Git/cmd:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/PowerShell/7/:/mnt/c/Users/rshade/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/rshade/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/rshade/AppData/Roaming/npm:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Users/rshade/go/bin:/mnt/c/Users/rshade/.dotnet/tools:/mnt/c/Users/rshade/AppData/Local/Keybase/:/mnt/c/Users/rshade/AppData/Local/Google/Cloud SDK/google-cloud-sdk/bin:/snap/bin:/home/rshade/.dotnet/tools:/usr/lib/go-1.21/bin:/home/rshade/github/Go/bin:/home/rshade/.pulumi/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  22.9.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@pulumi%2fpulumi: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND squid
+      at ClientRequest.onError (/usr/share/yarn/lib/cli.js:152376:17)
+      at Object.onceWrapper (node:events:634:26)
+      at ClientRequest.emit (node:events:519:28)
+      at emitErrorEvent (node:_http_client:103:11)
+      at Socket.socketErrorListener (node:_http_client:506:5)
+      at Socket.emit (node:events:519:28)
+      at emitErrorNT (node:internal/streams/destroy:170:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+
+npm manifest: 
+  {
+    "name": "pulumi-aws-eks-fargate-cmda",
+    "description": "I would like a dedicated node group and a fargate profile, please include the fargate profile creation",
+    "main": "index.ts",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "dependencies": {
+      "@pulumi/pulumi": "*",
+      "@pulumi/awsx": "2.10.0",
+      "@pulumi/eks": "1.0.3",
+      "@pulumi/aws": "6.13.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

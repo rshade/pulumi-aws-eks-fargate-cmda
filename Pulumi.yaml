@@ -1,0 +1,10 @@
+name: pulumi-aws-eks-fargate-cmda
+runtime:
+  name: nodejs
+  options:
+    packagemanager: yarn
+description: I would like a dedicated node group and a fargate profile, please include the fargate profile creation
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: https://www.pulumi.com/ai/api/project/18591aeb-ac5d-443e-8916-084d28c238cf.zip
