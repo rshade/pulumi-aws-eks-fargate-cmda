@@ -170,6 +170,7 @@ export class PulumiSelfHostedAgentComponent extends pulumi.ComponentResource {
                                         value: "ghcr.io/pulumi/pulumi-dotnet-8.0:3.137.0"
                                     },
                                     workerServiceAccountEnvVar,
+                                    ...(args.env || [])
 
                                 ],
                                 volumeMounts: [

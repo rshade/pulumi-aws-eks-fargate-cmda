@@ -10,6 +10,7 @@
         "@pulumi/pulumi": "*",
         "@pulumi/awsx": "2.16.1",
         "@pulumi/eks": "3.0.1",
-        "@pulumi/aws": "6.57.0"
+        "@pulumi/aws": "6.57.0",
+        "@pulumi/kubernetes": "4.18.3"
     }
 }

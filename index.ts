@@ -52,7 +52,7 @@ const managedNodeGroup = eks.createManagedNodeGroup(
 
 // Export the cluster's kubeconfig
 export const kubeconfig = cluster.kubeconfig;
-const k8sProvider = new k8s.Provider("k8s-provider", { kubeconfig })
+const k8sProvider = new k8s.Provider("k8s-provider", { kubeconfig }, { dependsOn: [cluster, managedNodeGroup] })
 
 const pulumiConfig = new pulumi.Config();
 export const ns = new k8s.core.v1.Namespace("stack-namespace", {
@@ -69,6 +69,13 @@ const fargateProfile = new aws.eks.FargateProfile("my-fargate-profile", {
     selectors: [{ namespace: ns.metadata.name, labels: { "app.kubernetes.io/name": "workflow-runner" } }]
 });
 
+const env = [
+    {
+        name: "PULUMI_AGENT_DEBUG_POD",
+        value: "true"
+    }
+]
+
 const agent = new PulumiSelfHostedAgentComponent(
     "self-hosted-agent",
     {
@@ -78,6 +85,7 @@ const agent = new PulumiSelfHostedAgentComponent(
         selfHostedServiceURL: pulumiConfig.get("selfHostedServiceURL") ?? "https://api.pulumi.com",
         imagePullPolicy: pulumiConfig.get("agentImagePullPolicy") || "Always",
         agentReplicas: pulumiConfig.getNumber("agentReplicas") || 3,
+        env
     },
     { provider: k8sProvider, dependsOn: [ns] },
 )
