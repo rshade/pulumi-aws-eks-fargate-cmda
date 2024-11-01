@@ -1,2 +1,7 @@
 config:
   aws:region: us-west-1
+  pulumi-aws-eks-fargate-cmda:agentNamespace: cmda
+  pulumi-aws-eks-fargate-cmda:agentImage: pulumi/customer-managed-deployment-agent:latest-amd64
+  pulumi-aws-eks-fargate-cmda:agentReplicas: "1"
+  pulumi-aws-eks-fargate-cmda:selfHostedAgentsAccessToken:
+    secure: AAABAAnHDth+Fen1DO0K/Uf/E3cQnsEpMTuzIGaqV9Q/9eqOMFOmUKexWeKGn9pTdAjEGFOgjW8+jkw9Ti6S2v0mqSRiu5NFsoDvLA==

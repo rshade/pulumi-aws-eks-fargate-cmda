@@ -8,8 +8,8 @@
     "author": "",
     "dependencies": {
         "@pulumi/pulumi": "*",
-        "@pulumi/awsx": "2.10.0",
-        "@pulumi/eks": "2.8.1",
-        "@pulumi/aws": "6.13.3"
+        "@pulumi/awsx": "2.16.1",
+        "@pulumi/eks": "3.0.1",
+        "@pulumi/aws": "6.57.0"
     }
 }
